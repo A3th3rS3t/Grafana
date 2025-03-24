@@ -16,7 +16,7 @@ cd /opt/docker/
 git clone https://github.com/A3th3rS3t/Grafana-docker.git
 ```
 ```bash
-cd Zabbix-docker
+cd grafana
 ```
 В репозитории должны быть файлы `docker-compose.yaml` и `.env`.
 
