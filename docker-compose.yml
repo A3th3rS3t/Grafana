@@ -9,7 +9,7 @@ services:
     ports:
      - 3000:3000
     volumes:
-      - ./volumes/grafana.ini/grafana.ini:/etc/grafana/grafana.ini
+#      - ./volumes/grafana.ini/grafana.ini:/etc/grafana/grafana.ini
       - ./volumes/grafana-storage:/var/lib/grafana
     networks:
       - grafana_net
