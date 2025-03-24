@@ -13,10 +13,10 @@ cd /opt/docker/
 ```
 Клонируйте репозиторий с GitHub:
 ```bash
-git clone https://github.com/A3th3rS3t/Grafana-docker.git
+git clone https://github.com/A3th3rS3t/Grafana.git
 ```
 ```bash
-cd Grafana-docker
+cd Grafana
 ```
 В репозитории должны быть файлы `docker-compose.yaml` и `.env`.
 
