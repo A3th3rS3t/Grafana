@@ -2,15 +2,28 @@
 services:
   grafana:
     image: grafana/grafana:11.5.2
-    container_name: grafana_app
+    container_name: grafana
     restart: always
     env_file:
       - .env
     ports:
      - 3000:3000
     volumes:
-#      - ./volumes/grafana.ini/grafana.ini:/etc/grafana/grafana.ini
+      - ./volumes/grafana.ini/grafana.ini:/etc/grafana/grafana.ini
       - ./volumes/grafana-storage:/var/lib/grafana
+    networks:
+      - grafana_net
+
+  # Loki: log storage system
+  loki:
+    image: grafana/loki:2.8.4
+    container_name: loki
+    restart: always
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./volumes//loki-config.yaml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
     networks:
       - grafana_net
 
